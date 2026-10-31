@@ -104,6 +104,8 @@
         formMessage.classList.add("success");
         sessionStorage.setItem("activeInviteCode", code);
         guestName.textContent = recipient.name;
+        // Reveal the exact recipient palette on the handoff screen.
+        document.body.dataset.design = recipient.design || "warm-home";
         document.body.classList.add("invite-accepted");
         successOverlay.classList.add("active");
         successOverlay.setAttribute("aria-hidden", "false");

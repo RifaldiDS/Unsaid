@@ -29,3 +29,11 @@ This is a *static client-side* website. Ticket codes and letters are stored in J
 ## Included assets
 - `assets/audio/titik-nadir-soft.mp3`: existing background audio (unchanged)
 - `assets/branding/`: original UNSENT brand assets and favicon (unchanged)
+
+## Update: animated, personalized color journey (31 October 2026)
+
+- The first screen has restrained floating paper, star glints and slow gradient drift.
+- After a valid ticket is entered, the success overlay adopts that recipient’s actual color palette.
+- The personalized introduction (second screen) now borrows colors directly from the matching unique letter (third screen); opening the envelope blends into the saturated letter-world gradient.
+- All 30 ticket entries, letter contents, audio controls, once-read storage behavior and GitHub Pages static hosting are retained.
+- Animations respect `prefers-reduced-motion` for users who request less movement.

@@ -1,0 +1,328 @@
+/* THE UNSAID COLLECTION — motion + the recipient's own palette.
+   This file intentionally comes AFTER the existing layout styles.
+   All 30 palettes come from recipient-designs.css (single source of truth). */
+
+/* ── Scene 1: a quiet, living invitation ── */
+.unsaid-landing .atmosphere-wash {
+  will-change: transform;
+  animation: unsaid-wash-drift 17s ease-in-out infinite alternate;
+}
+.unsaid-landing .atmosphere-peach {
+  animation: unsaid-peach-drift 20s ease-in-out infinite alternate;
+  transform-origin: 60% 80%;
+}
+.unsaid-landing .unsaid-brand { animation: unsaid-rise-in .85s .03s both; }
+.unsaid-landing .unsaid-kicker { animation: unsaid-rise-in .85s .12s both; }
+.unsaid-landing .unsaid-copy h1 { animation: unsaid-rise-in 1.15s .22s both; }
+.unsaid-landing .unsaid-description { animation: unsaid-rise-in .95s .43s both; }
+.unsaid-landing .unsaid-whisper { animation: unsaid-rise-in .95s .56s both; }
+.unsaid-landing .unsaid-form { animation: unsaid-rise-in 1s .68s both; }
+.unsaid-landing .unsaid-footer { animation: unsaid-rise-in 1s .85s both; }
+.unsaid-landing .unsaid-art { animation: unsaid-art-arrive 1.3s .4s both; }
+.unsaid-art .unsaid-postcard {
+  animation: unsaid-postcard-hover 6.8s ease-in-out infinite;
+  will-change: transform;
+}
+.unsaid-art .unsaid-postcard-back { animation: unsaid-back-hover 7.9s ease-in-out infinite; }
+.unsaid-art .unsaid-art-orbit { animation: unsaid-orbit-breathe 9s ease-in-out infinite; }
+.unsaid-art .unsaid-art-seal { animation: unsaid-seal-sway 5.6s ease-in-out infinite; }
+.unsaid-art .postcard-flower { animation: unsaid-flower-spark 4.6s ease-in-out infinite; }
+.unsaid-art .postcard-rule { position:relative; overflow:hidden; }
+.unsaid-art .postcard-rule::after {
+  content:""; position:absolute; inset:0; width:35%;
+  background:linear-gradient(90deg, transparent, #f5a1b5, transparent);
+  animation: unsaid-rule-shimmer 6s ease-in-out infinite;
+}
+.unsaid-landing .ambient-glimmer {
+  position:absolute; z-index:1; display:block;
+  font-family: Georgia, serif; font-size:clamp(16px,2vw,28px);
+  color:#e999b4; opacity:0;
+  text-shadow:0 0 18px #f4b4cb4d;
+  animation: unsaid-glimmer 7s ease-in-out infinite;
+}
+.unsaid-landing .glimmer-one { top:15%; left:9%; animation-delay:-1s; }
+.unsaid-landing .glimmer-two { top:29%; right:12%; color:#96bac8; font-size:15px; animation-delay:-4s; }
+.unsaid-landing .glimmer-three { bottom:28%; left:48%; color:#c6a6a4; font-size:19px; animation-delay:-2.4s; }
+.unsaid-landing .glimmer-four { bottom:10%; right:17%; color:#dfa7b8; font-size:12px; animation-delay:-5.2s; }
+.unsaid-art .art-floating-star {
+  position:absolute; z-index:7; font-family:Georgia,serif; font-size:19px;
+  opacity:.8; color:#dc829e; pointer-events:none;
+  animation: unsaid-star-float 5s ease-in-out infinite;
+}
+.art-floating-star.floating-star-a { top:8%; left:3%; animation-delay:-2.1s; }
+.art-floating-star.floating-star-b { top:42%; right:-4%; font-size:14px; color:#6eb9c7; animation-delay:-3.7s; }
+.art-floating-star.floating-star-c { bottom:5%; left:18%; font-size:13px; animation-delay:-.9s; }
+
+/* The accepted ticket already knows the exact recipient; soften into their palette. */
+body.unsaid-landing[data-design] .dream-success.success-overlay {
+  background:
+    radial-gradient(circle at 55% 30%, color-mix(in srgb, var(--rd-accent) 36%, transparent), transparent 60%),
+    linear-gradient(140deg,
+      color-mix(in srgb, var(--rd-accent) 48%, #243044),
+      color-mix(in srgb, var(--rd-accent2) 43%, #152333));
+  transition:background .6s ease, opacity .45s ease, visibility .4s ease;
+}
+body.unsaid-landing[data-design] .success-card {
+  background:var(--rd-paper);
+  color:var(--rd-ink);
+  border:1px solid color-mix(in srgb, var(--rd-accent) 35%, white);
+  box-shadow:0 38px 100px #1423333d;
+}
+body.unsaid-landing[data-design] .success-card h2 { color:var(--rd-ink); }
+body.unsaid-landing[data-design] .success-kicker { color:var(--rd-accent); }
+body.unsaid-landing[data-design] .success-card > p:not(.success-kicker) { color:var(--rd-muted); }
+body.unsaid-landing[data-design] .loading-line span { background:linear-gradient(90deg,var(--rd-accent),var(--rd-accent2)); }
+body.unsaid-landing[data-design] .success-portal { filter:hue-rotate(0deg); animation:unsaid-portal-breathe 2.6s ease-in-out infinite; }
+
+/* ── Scene 2: all colors derived from the matching unique letter ── */
+body.message-page[data-design]:not(.letter-opened) {
+  background:
+    radial-gradient(ellipse at 90% 8%, color-mix(in srgb,var(--rd-accent2) 24%, transparent), transparent 48%),
+    radial-gradient(ellipse at 4% 94%, color-mix(in srgb,var(--rd-accent) 20%, transparent), transparent 54%),
+    linear-gradient(140deg,
+      color-mix(in srgb,var(--rd-paper) 88%,#f8eadd),
+      color-mix(in srgb,var(--rd-paper) 84%,var(--rd-accent2))) !important;
+  color:var(--rd-ink);
+}
+.message-page[data-design] .edition-card {
+  border-color:color-mix(in srgb,var(--rd-accent) 18%,white);
+  box-shadow:0 26px 76px color-mix(in srgb, var(--rd-accent2) 16%,transparent);
+}
+.message-page[data-design] .edition-card::before {
+  border-color:color-mix(in srgb,var(--rd-accent) 20%,transparent);
+}
+.message-page[data-design] .unsaid-edition-art {
+  background:
+    radial-gradient(circle at 52% 33%, color-mix(in srgb, var(--rd-paper) 65%, white), transparent 48%),
+    radial-gradient(ellipse at 0% 100%,color-mix(in srgb,var(--rd-accent2) 30%, white),transparent 66%),
+    linear-gradient(140deg,
+      color-mix(in srgb, var(--rd-paper) 60%, var(--rd-accent)),
+      color-mix(in srgb, var(--rd-paper) 60%, var(--rd-accent2))) !important;
+}
+.message-page[data-design] .edition-copy {
+  background:
+    radial-gradient(ellipse at 95% 5%,color-mix(in srgb,var(--rd-accent) 9%,transparent),transparent 55%),
+    color-mix(in srgb, var(--rd-paper) 96%, white);
+}
+.message-page[data-design] .edition-paper-stack-front {
+  background:color-mix(in srgb,var(--rd-paper) 94%,white);
+  border-color:color-mix(in srgb,var(--rd-accent) 28%,white);
+}
+.message-page[data-design] .edition-paper-stack-back {
+  background:color-mix(in srgb,var(--rd-accent) 50%,var(--rd-paper));
+  border-color:color-mix(in srgb,var(--rd-accent) 32%,white);
+}
+.message-page[data-design] .edition-visual-circle {
+  border-color:color-mix(in srgb,var(--rd-accent) 27%,white);
+  box-shadow:0 0 0 30px color-mix(in srgb,var(--rd-paper) 42%,transparent);
+}
+.message-page[data-design] .edition-paper-stamp,
+.message-page[data-design] .edition-art-spark { color:var(--rd-accent); }
+.message-page[data-design] .edition-paper-script,
+.message-page[data-design] .intro-scene h1 { color:var(--rd-ink); }
+.message-page[data-design] .message-kicker { color:var(--rd-accent); }
+.message-page[data-design] .message-subtitle,
+.message-page[data-design] .edition-note { color:var(--rd-muted); }
+.message-page[data-design] .edition-spine { background:var(--rd-ink); }
+.message-page[data-design] .primary-button { background:var(--rd-ink) !important; }
+.message-page[data-design] .primary-button:hover { background:var(--rd-accent) !important; }
+.message-page[data-design] .edition-paper-eyebrow,
+.message-page[data-design] .edition-paper-footnote,
+.message-page[data-design] .edition-art-caption,
+.message-page[data-design] .edition-topline { color:var(--rd-muted); }
+.message-page[data-design] .edition-paper-line { background:color-mix(in srgb,var(--rd-accent) 25%,transparent); }
+
+/* The dynamic palette actually follows the person from the cover to the letter.
+   The final letter gets its already-existing rich rd-bg and individual art. */
+body.message-page[data-design] .theme-transition {
+  background:var(--rd-bg) !important;
+}
+body.message-page[data-design] .theme-transition::before {
+  content:""; position:absolute; inset:-30%; pointer-events:none;
+  background:radial-gradient(circle at 53% 47%,color-mix(in srgb, var(--rd-accent) 32%,transparent),transparent 47%);
+  animation:unsaid-transition-veil 3.6s ease-in-out infinite;
+}
+body.message-page[data-design] .transition-caption {
+  color:var(--rd-side);
+  text-shadow:0 2px 20px #1b203066;
+}
+.theme-transition .transition-progress {
+  position:absolute; top:calc(50% + 50px); left:50%; z-index:5;
+  width:min(165px,42vw); height:2px; overflow:hidden;
+  border-radius:2px; background:#ffffff4d; transform:translateX(-50%);
+  opacity:0; transition:opacity .2s ease;
+}
+.theme-transition.active .transition-progress { opacity:.9; }
+.theme-transition .transition-progress span {
+  display:block; width:100%; height:100%;
+  background:linear-gradient(90deg,transparent,#fff,transparent);
+  transform:translateX(-100%);
+}
+.theme-transition.active .transition-progress span { animation:unsaid-progress-sweep 1.35s ease-out forwards; }
+
+/* gentle entrance motion in personalized pre-letter scene */
+.message-page:not(.letter-opened) .edition-card { animation:unsaid-cover-arrive .95s .16s both; }
+.message-page:not(.letter-opened) .edition-topline { animation:unsaid-rise-in .8s .3s both; }
+.message-page:not(.letter-opened) .message-kicker { animation:unsaid-rise-in .85s .43s both; }
+.message-page:not(.letter-opened) .intro-scene h1 { animation:unsaid-rise-in .95s .51s both; }
+.message-page:not(.letter-opened) .message-subtitle { animation:unsaid-rise-in .85s .62s both; }
+.message-page:not(.letter-opened) .envelope-wrap { animation:unsaid-rise-in .85s .72s both; }
+.message-page:not(.letter-opened) .primary-button { animation:unsaid-rise-in .85s .82s both; }
+.message-page:not(.letter-opened) .edition-paper-stack-front {
+  animation:unsaid-paper-front 6.4s ease-in-out infinite;
+  will-change:transform;
+}
+.message-page:not(.letter-opened) .edition-paper-stack-back {
+  animation:unsaid-paper-back 7.6s ease-in-out infinite;
+}
+.message-page:not(.letter-opened) .edition-art-spark { animation:unsaid-star-float 4.4s ease-in-out infinite; }
+.message-page:not(.letter-opened) .edition-visual-circle { animation:unsaid-orbit-breathe 8s ease-in-out infinite; }
+.message-page:not(.letter-opened) .edition-floating-accent {
+  position:absolute; z-index:3; display:block;
+  font-family:Georgia,serif;
+  color:var(--rd-accent); opacity:.72;
+  animation:unsaid-star-float 5s ease-in-out infinite;
+}
+.message-page .edition-floating-accent.accent-a { top:12%; left:13%; font-size:18px; animation-delay:-1.7s; }
+.message-page .edition-floating-accent.accent-b { right:11%; top:58%; font-size:22px; color:var(--rd-accent2); animation-delay:-3.1s; }
+.message-page .edition-floating-accent.accent-c { bottom:17%; left:10%; font-size:14px; animation-delay:-4.2s; }
+.message-page:not(.letter-opened) .edition-art-caption { animation:unsaid-rise-in 1s .7s both; }
+
+@keyframes unsaid-rise-in {
+  from { opacity:0; transform:translate3d(0,19px,0); filter:blur(3px); }
+  to { opacity:1; transform:translate3d(0,0,0); filter:blur(0); }
+}
+@keyframes unsaid-art-arrive {
+  from { opacity:0; transform:translate3d(28px,12px,0) scale(.97); }
+  to { opacity:1; transform:translate3d(0,0,0) scale(1); }
+}
+@keyframes unsaid-cover-arrive {
+  from { opacity:0; transform:translateY(22px) scale(.988); }
+  to { opacity:1; transform:translateY(0) scale(1); }
+}
+@keyframes unsaid-wash-drift {
+  from { transform:translate3d(-3%,-2%,0) scale(1); }
+  to { transform:translate3d(8%,4%,0) scale(1.1); }
+}
+@keyframes unsaid-peach-drift {
+  from { transform:rotate(-13deg) translate3d(0,0,0) scale(1); }
+  to { transform:rotate(-9deg) translate3d(-35px,-17px,0) scale(1.06); }
+}
+@keyframes unsaid-postcard-hover {
+  0%,100% { transform:rotate(-6deg) translateY(0); }
+  50% { transform:rotate(-4.4deg) translateY(-13px); }
+}
+@keyframes unsaid-back-hover {
+  0%,100% { transform:rotate(11deg) translateY(0); }
+  50% { transform:rotate(9deg) translateY(8px); }
+}
+@keyframes unsaid-seal-sway {
+  0%,100% { transform:rotate(11deg) translateY(0); }
+  50% { transform:rotate(17deg) translateY(-9px); }
+}
+@keyframes unsaid-orbit-breathe {
+  0%,100% { transform:scale(1); opacity:.7; }
+  50% { transform:scale(1.055); opacity:.38; }
+}
+@keyframes unsaid-flower-spark {
+  0%,100% { transform:rotate(0) scale(1); opacity:1; }
+  50% { transform:rotate(11deg) scale(1.075); opacity:.76; }
+}
+@keyframes unsaid-rule-shimmer {
+  0%,20% { transform:translateX(-180%); }
+  58%,100% { transform:translateX(400%); }
+}
+@keyframes unsaid-glimmer {
+  0%,100% { opacity:0; transform:translateY(5px) scale(.7) rotate(-10deg); }
+  38% { opacity:.45; transform:translateY(-6px) scale(1.1) rotate(18deg); }
+  65% { opacity:.2; transform:translateY(-9px) scale(.9) rotate(23deg); }
+}
+@keyframes unsaid-star-float {
+  0%,100% { transform:translateY(0) rotate(-8deg) scale(.93); opacity:.55; }
+  50% { transform:translateY(-12px) rotate(12deg) scale(1.15); opacity:.94; }
+}
+@keyframes unsaid-paper-front {
+  0%,100% { transform:rotate(-5deg) translateY(0); }
+  50% { transform:rotate(-3deg) translateY(-10px); }
+}
+@keyframes unsaid-paper-back {
+  0%,100% { transform:translate(26px,10px) rotate(9deg); }
+  50% { transform:translate(28px,18px) rotate(11deg); }
+}
+@keyframes unsaid-transition-veil {
+  0%,100% { transform:scale(.92) rotate(-3deg); opacity:.6; }
+  50% { transform:scale(1.09) rotate(3deg); opacity:1; }
+}
+@keyframes unsaid-progress-sweep { from { transform:translateX(-100%); } to { transform:translateX(100%); } }
+@keyframes unsaid-portal-breathe {
+  0%,100% { transform:scale(1); opacity:.8; }
+  50% { transform:scale(1.12); opacity:1; }
+}
+
+/* Keep the motion decorative: do not block touch or force overflow on phones. */
+@media(max-width:700px) {
+  .unsaid-landing .glimmer-two,.unsaid-landing .glimmer-three { display:none; }
+  .unsaid-art .art-floating-star.floating-star-b { right:0; }
+  .message-page:not(.letter-opened) .edition-paper-stack-front { animation-duration:7.5s; }
+  .message-page .edition-floating-accent.accent-b { right:4%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .unsaid-landing .atmosphere-wash,
+  .unsaid-landing .atmosphere-peach,
+  .unsaid-landing .unsaid-brand,
+  .unsaid-landing .unsaid-kicker,
+  .unsaid-landing .unsaid-copy h1,
+  .unsaid-landing .unsaid-description,
+  .unsaid-landing .unsaid-whisper,
+  .unsaid-landing .unsaid-form,
+  .unsaid-landing .unsaid-footer,
+  .unsaid-landing .unsaid-art,
+  .unsaid-art .unsaid-postcard,
+  .unsaid-art .unsaid-postcard-back,
+  .unsaid-art .unsaid-art-orbit,
+  .unsaid-art .unsaid-art-seal,
+  .unsaid-art .postcard-flower,
+  .unsaid-art .postcard-rule::after,
+  .unsaid-landing .ambient-glimmer,
+  .unsaid-art .art-floating-star,
+  body.unsaid-landing[data-design] .success-portal,
+  .message-page:not(.letter-opened) .edition-card,
+  .message-page:not(.letter-opened) .edition-topline,
+  .message-page:not(.letter-opened) .message-kicker,
+  .message-page:not(.letter-opened) .intro-scene h1,
+  .message-page:not(.letter-opened) .message-subtitle,
+  .message-page:not(.letter-opened) .envelope-wrap,
+  .message-page:not(.letter-opened) .primary-button,
+  .message-page:not(.letter-opened) .edition-paper-stack-front,
+  .message-page:not(.letter-opened) .edition-paper-stack-back,
+  .message-page:not(.letter-opened) .edition-art-spark,
+  .message-page:not(.letter-opened) .edition-visual-circle,
+  .message-page:not(.letter-opened) .edition-floating-accent,
+  .message-page:not(.letter-opened) .edition-art-caption,
+  body.message-page[data-design] .theme-transition::before,
+  .theme-transition.active .transition-progress span {
+    animation:none !important;
+  }
+  .message-page:not(.letter-opened) .edition-paper-stack-front { transform:rotate(-5deg); }
+  .message-page:not(.letter-opened) .edition-paper-stack-back { transform:translate(26px,10px) rotate(9deg); }
+  .unsaid-art .unsaid-postcard { transform:rotate(-6deg); }
+  .unsaid-art .unsaid-postcard-back { transform:rotate(11deg); }
+  .unsaid-art .unsaid-art-seal { transform:rotate(11deg); }
+  .unsaid-landing .ambient-glimmer { opacity:.25; }
+}
+/* Preserve the deliberate 75%-scale envelope during its entrance. */
+.message-page:not(.letter-opened) .envelope-wrap { animation-name:unsaid-envelope-arrive; }
+@keyframes unsaid-envelope-arrive {
+  from { opacity:0; transform:translateY(18px) scale(.75); }
+  to { opacity:1; transform:translateY(0) scale(.75); }
+}
+/* Even the small envelope and its seal adopt the personal design. */
+body.message-page[data-design] {
+  --theme-envelope:color-mix(in srgb,var(--rd-accent) 65%,var(--rd-paper));
+  --theme-envelope-front:color-mix(in srgb,var(--rd-accent) 78%,var(--rd-ink));
+  --theme-envelope-flap:color-mix(in srgb,var(--rd-accent) 31%,var(--rd-paper));
+}
+body.message-page[data-design]:not(.letter-opened) .music-toggle {
+  color:var(--rd-ink);
+  border-color:color-mix(in srgb,var(--rd-accent) 22%,white);
+}
