@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="description" content="A personal message, written for you." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/branding/favicon-192.png" />
+  <link rel="apple-touch-icon" href="assets/branding/favicon-192.png" />
+  <title>Your Message — The Unsaid Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20260629-scrollfix3" />
+  <link rel="stylesheet" href="css/themes.css?v=20260629-scrollfix3" />
+  <link rel="stylesheet" href="css/message-v2.css?v=20260629-scrollfix3" />
+  <link rel="stylesheet" href="css/recipient-designs.css?v=20260818-30unique" />
+  <link rel="stylesheet" href="css/unsaid-redesign.css?v=unsaid-20261031" />
+</head>
+<body class="message-page" data-theme="eulalie">
+  <div class="theme-background" aria-hidden="true">
+    <span class="glow glow-one"></span>
+    <span class="glow glow-two"></span>
+    <div class="theme-motif">
+      <span class="motif motif-one"></span>
+      <span class="motif motif-two"></span>
+      <span class="motif motif-three"></span>
+      <span class="motif motif-four"></span>
+      <span class="motif motif-five"></span>
+    </div>
+    <div id="particles" class="particles"></div>
+  </div>
+
+  <header class="message-header">
+    <div class="brand message-brand-static" aria-label="THE UNSAID COLLECTION — a little note">
+      <img class="message-brand-logo" src="assets/branding/unsent-mark.png" alt="" aria-hidden="true" />
+      <span class="message-brand-copy"><strong>THE UNSAID COLLECTION</strong><small>words that found their way</small></span>
+    </div>
+    <div class="header-actions">
+      <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Play background music" title="Background music">
+        <span class="music-toggle-icon" aria-hidden="true">♪</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="message-shell">
+    <section id="introScene" class="intro-scene" aria-labelledby="messageTitle">
+      <div class="edition-card">
+        <div class="edition-art unsaid-edition-art" aria-hidden="true">
+          <span class="edition-visual-circle"></span>
+          <div class="edition-paper-stack edition-paper-stack-back"></div>
+          <div class="edition-paper-stack edition-paper-stack-front">
+            <span class="edition-paper-eyebrow">THE UNSAID COLLECTION</span>
+            <span class="edition-paper-stamp">✿</span>
+            <span class="edition-paper-script">somewhere,<br />between us.</span>
+            <span class="edition-paper-line"></span>
+            <span class="edition-paper-footnote">WORDS THAT FOUND THEIR WAY</span>
+          </div>
+          <span class="edition-art-caption">A MESSAGE, FOR ONE.</span>
+          <span class="edition-art-spark">✳</span>
+        </div>
+
+        <div class="edition-copy">
+          <div class="edition-topline">
+            <span id="introThemeLabel">The Unsaid Collection</span>
+            <span>A NOTE, JUST FOR YOU</span>
+          </div>
+
+          <p id="messageKicker" class="message-kicker">A little message for</p>
+          <h1 id="messageTitle">Someone Special</h1>
+          <p id="messageSubtitle" class="message-subtitle">Some words are meant to find just one person.</p>
+
+          <div class="envelope-wrap">
+            <button id="openLetterButton" class="envelope" type="button" aria-label="Buka surat">
+              <span class="envelope-back"></span>
+              <span class="letter-preview">
+                <span class="letter-lines"></span>
+                <span class="letter-seal">✦</span>
+              </span>
+              <span class="envelope-front"></span>
+              <span class="envelope-flap"></span>
+            </button>
+          </div>
+
+          <button id="openTextButton" class="primary-button" type="button">Open your message <span>↗</span></button>
+          <p class="edition-note">Some words are best kept between two people.</p>
+        </div>
+
+        <div class="edition-spine" aria-hidden="true">
+          <span>WORDS WORTH KEEPING</span>
+          <strong>02</strong>
+        </div>
+      </div>
+    </section>
+
+    <div id="themeTransition" class="theme-transition" aria-hidden="true">
+      <span class="transition-shape transition-shape-one"></span>
+      <span class="transition-shape transition-shape-two"></span>
+      <span class="transition-shape transition-shape-three"></span>
+      <span class="transition-shape transition-shape-four"></span>
+      <span class="transition-caption" id="transitionCaption">Opening your message</span>
+    </div>
+
+    <article id="letterScene" class="letter-scene" aria-hidden="true">
+      <div class="letter-stage">
+        <div class="letter-side-title" aria-hidden="true">
+          <span>A MESSAGE FOR YOU</span>
+          <strong id="letterThemeLabel">The Unsaid Collection</strong>
+        </div>
+
+        <div class="letter-card">
+          <div class="letter-poster-band" aria-hidden="true">
+            <span class="band-orb band-orb-one"></span>
+            <span class="band-orb band-orb-two"></span>
+            <span class="band-line band-line-one"></span>
+            <span class="band-line band-line-two"></span>
+            <span class="band-mark">✦</span>
+          </div>
+
+          <div class="letter-topline">
+            <span id="letterDate">27 June 2026</span>
+            <span class="letter-symbol">✦</span>
+          </div>
+
+          <p id="letterGreeting" class="letter-greeting">Dear friend,</p>
+          <div id="letterBody" class="letter-body"></div>
+
+          <section id="pauseScene" class="pause-scene" aria-hidden="true">
+            <div class="pause-art" aria-hidden="true">
+              <span class="pause-orb pause-orb-one"></span>
+              <span class="pause-orb pause-orb-two"></span>
+              <span class="pause-line pause-line-one"></span>
+              <span class="pause-line pause-line-two"></span>
+              <span class="pause-flourish pause-flourish-one"></span>
+              <span class="pause-flourish pause-flourish-two"></span>
+            </div>
+            <p id="pauseQuote" class="pause-quote">Some memories deserve a gentler place to land.</p>
+            <span id="pauseCaption" class="pause-caption">a quiet pause</span>
+          </section>
+
+          <div class="letter-closing">
+            <p id="closingText">Thank you for being part of my story.</p>
+            <div class="signature-block">
+              <span>With sincerity,</span>
+              <strong id="signatureName">— Someone who is learning</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="after-message completion-panel">
+        <span class="final-mark">✦</span>
+        <p class="completion-kicker">Before you close this page</p>
+        <h2>Have you finished reading your message?</h2>
+        <p class="completion-copy">Take all the time you need. Once you confirm, this message will quietly close and cannot be opened again in this browser.</p>
+        <button id="finishReadingButton" class="secondary-button finish-reading-button" type="button">I’ve finished reading</button>
+      </div>
+    </article>
+  </main>
+
+  <div id="finishDialog" class="finish-dialog" aria-hidden="true">
+    <div class="finish-dialog-backdrop" data-dialog-close></div>
+    <section class="finish-dialog-card" role="dialog" aria-modal="true" aria-labelledby="finishDialogTitle" aria-describedby="finishDialogText">
+      <span class="finish-dialog-mark" aria-hidden="true">✦</span>
+      <p class="finish-dialog-kicker">One last confirmation</p>
+      <h2 id="finishDialogTitle">Ready to close this message?</h2>
+      <p id="finishDialogText">After you continue, this message will fade away, and this code will no longer open it in this browser.</p>
+      <div class="finish-dialog-actions">
+        <button id="keepReadingButton" class="dialog-button dialog-button-secondary" type="button">Not yet</button>
+        <button id="confirmFinishButton" class="dialog-button dialog-button-primary" type="button">Yes, close the message</button>
+      </div>
+    </section>
+  </div>
+
+  <div id="eraseDust" class="erase-dust" aria-hidden="true"></div>
+
+  <div id="goodbyeScreen" class="goodbye-screen" aria-hidden="true">
+    <span class="goodbye-mark">✦</span>
+    <p>This message has gently closed.</p>
+    <small>Some words stay with us, even after the page is gone.</small>
+  </div>
+
+
+  <div id="privacyShield" class="privacy-shield" aria-hidden="true">
+    <div class="privacy-shield-card">
+      <span aria-hidden="true">✦</span>
+      <p>Your message is hidden</p>
+      <small>Return to this window to continue your letter.</small>
+    </div>
+  </div>
+
+  <div id="privacyNotice" class="privacy-notice" role="status" aria-live="polite">
+    This personal message cannot be copied.
+  </div>
+
+  <footer class="message-footer">
+    <span id="themeLabel">The Unsaid Collection</span>
+    <span>For every little thing worth saying.</span>
+  </footer>
+
+  <audio id="backgroundMusic" src="assets/audio/titik-nadir-soft.mp3" preload="auto" loop playsinline webkit-playsinline></audio>
+
+  <script src="js/messages.js?v=20260629-scrollfix3"></script>
+  <script src="js/message.js?v=20260818-simplemobileaudio1"></script>
+</body>
+</html>

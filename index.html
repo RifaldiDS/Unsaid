@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Somewhere between us, there may be a message written especially for you. Welcome to The Unsaid Collection." />
+  <meta name="theme-color" content="#f8f4ee" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/branding/favicon-192.png" />
+  <title>The Unsaid Collection — A Message for You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=unsaid-20261031" />
+  <link rel="stylesheet" href="css/landing-v2.css?v=unsaid-20261031" />
+  <link rel="stylesheet" href="css/unsaid-redesign.css?v=unsaid-20261031" />
+</head>
+<body class="landing-page dream-gate unsaid-landing">
+  <div class="unsaid-atmosphere" aria-hidden="true">
+    <span class="atmosphere-wash"></span>
+    <span class="atmosphere-peach"></span>
+    <span class="atmosphere-grain"></span>
+  </div>
+
+  <header class="dream-header unsaid-header">
+    <a class="dream-brand unsaid-brand" href="index.html" aria-label="The Unsaid Collection home">
+      <img class="unsaid-brand-mark" src="assets/branding/unsent-mark.png" alt="" />
+      <span class="dream-brand-copy"><strong>THE UNSAID COLLECTION</strong><small>words that found their way</small></span>
+    </a>
+    <span class="dream-edition unsaid-edition">PERSONAL NOTES & LITTLE THINGS</span>
+  </header>
+
+  <main class="dream-main unsaid-main">
+    <section class="dream-copy unsaid-copy" aria-labelledby="page-title">
+      <p class="dream-kicker unsaid-kicker"><span aria-hidden="true"></span>SOMEWHERE BETWEEN US</p>
+      <h1 id="page-title">A message<br />is waiting<br /><em>for you.</em></h1>
+      <p class="dream-description unsaid-description">Somewhere in this little space, there may be a message written especially for you.</p>
+      <p class="unsaid-whisper">A thank you, an appreciation, a memory — or simply something left unsaid.</p>
+
+      <form id="inviteForm" class="invite-form dream-form unsaid-form" novalidate>
+        <label for="inviteCode" class="unsaid-input-label">HAVE A LITTLE CODE?</label>
+        <p id="formMessage" class="form-message dream-feedback" role="status" aria-live="polite"></p>
+        <div class="input-wrap dream-input unsaid-input">
+          <input id="inviteCode" name="inviteCode" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ENTER YOUR TICKET CODE" maxlength="30" aria-describedby="formMessage" />
+          <button id="submitButton" type="submit" aria-label="Open your message">
+            <span class="button-label">OPEN MESSAGE</span><span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <p class="unsaid-form-note">Enter the code you received to discover your note.</p>
+      </form>
+    </section>
+
+    <aside class="unsaid-art" aria-hidden="true">
+      <span class="unsaid-art-orbit"></span>
+      <div class="unsaid-postcard-back"><span>WORDS, KEPT CLOSE.</span></div>
+      <div class="unsaid-postcard">
+        <div class="postcard-heading"><span>THE UNSAID</span><span>№ 001 — ∞</span></div>
+        <div class="postcard-flower">✳</div>
+        <div class="postcard-script">dear you,</div>
+        <p>not everything beautiful<br />has to be said out loud.</p>
+        <div class="postcard-rule"></div>
+        <span class="postcard-signoff">with all the things we mean, &nbsp; ♡</span>
+      </div>
+      <div class="unsaid-art-seal"><span>✿</span><small>MADE<br />FOR YOU</small></div>
+      <div class="unsaid-art-caption">SOME WORDS ARE WORTH KEEPING.</div>
+    </aside>
+  </main>
+
+  <footer class="unsaid-footer"><span>THE LITTLE THINGS WE SOMETIMES LEAVE UNSAID</span><span>EST. WITH HEART &nbsp; ✳</span></footer>
+
+  <div id="successOverlay" class="success-overlay dream-success" aria-hidden="true">
+    <div class="success-portal" aria-hidden="true"><span class="success-orbit orbit-one"></span><span class="success-orbit orbit-two"></span><span class="success-star">✦</span></div>
+    <div class="success-card"><p class="success-kicker">A NOTE HAS FOUND YOU</p><h2>For you, <span id="guestName">friend</span>.</h2><p>Your personal message is opening.</p><div class="loading-line"><span></span></div></div>
+  </div>
+
+  <button id="ownerResetButton" class="owner-reset-button" type="button" aria-label="Reset one-time read history"></button>
+  <script src="js/messages.js?v=unsaid-20261031"></script>
+  <script src="js/app.js?v=unsaid-20261031"></script>
+</body>
+</html>

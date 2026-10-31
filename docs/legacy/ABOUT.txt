@@ -1,0 +1,2 @@
+These files are retained from the user's original KKN website as historical notes.
+The current project name, setup and editing guide are in ../../README.md.
